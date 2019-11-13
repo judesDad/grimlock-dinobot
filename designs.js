@@ -1,35 +1,17 @@
 // Select color input
+var colorSelection = document.getElementById('colorPicker');
 // Select size input
-var height, width, color;
+var sizeForm = document.getElementById('sizePicker');
+var gridHeight = document.getElementById('inputHeight');
+var gridWidth = document.getElementById('inputWidth');
 
 // When size is submitted by the user, call makeGrid()
-$('#sizePicker').submit(function (event){
+sizePicker.addEventListener('click', event => {
     event.preventDefault();
-    height = $('#inputHeight').val();
-    width = $('#inputWidth').val();
-    makeGrid(height, width);
-    
-})
-
+});
+console.log(event + 'test');
+function makeGrid() {
 
 // Your code goes here!
-function makeGrid(x, y) {
-    $('tr').remove();
-    for (var d = 1; d <= x; d++) {
-        $('#pixelCanvas').append('<tr id=table' + d + '></tr>');
-        for (var j = 1; j <= y; j++) {
-            $('#table' + d).append('<td></td>');
-        }
-    }
-
-    $('td').click(function addColor() {
-        color = $('#colorPicker').val();
-
-        if ($(this).attr('style')) {
-            $(this).removeAttr('style')
-        } else {
-            $(this).attr('style', 'background-color:' + color);
-        }
-    })
 
 }
