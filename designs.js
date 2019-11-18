@@ -9,7 +9,7 @@ var gridWidth = document.getElementById('inputWidth');
 // When size is submitted by the user, call makeGrid()
 function gridSize(sizePicker) {
     document.getElementById(sizePicker).submit(event);
-    sizePicker.addEventListener('click', event => {
+    sizePicker.addEventListener('submit', event => {
     event.preventDefault();
     height = ('inputHeight.value');
     width = ('inputWidth.value');
