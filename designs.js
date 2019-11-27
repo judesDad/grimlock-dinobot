@@ -13,7 +13,7 @@ document.addEventListener('submit', (event) => {
     height = (inputHeight.value);
     width = (inputWidth.value);
     //console.log(height, width);
-   
+    designCanvas.innerHTML = "";
     makeGrid(height, width);
 })
 
@@ -30,7 +30,10 @@ for (let d = 0; d <= height; d++) {
         let cell = row.insertCell(j);
     cell.addEventListener('click', (event) => {
         event.target.style.backgroundColor = color.value;
-        
+     
+    designCanvas.addEventListener('dblclick', (event) => {
+        event.target.style.backgroundColor = ''
+    });    
         //console.log(event);
         
     })    
