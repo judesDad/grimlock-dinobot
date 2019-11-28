@@ -26,13 +26,12 @@ document.addEventListener('submit', (event) => { // submit event to send height 
 
 function makeGrid(height, width) {  // makeGrid Function to build grid by height and width
 
-for (let d = 0; d <= height; d++) {  // nested for loop to to insert rows and cells for grid
+for (let d = 0; d < height; d++) {  // nested for loop to to insert rows and cells for grid
     let row = designCanvas.insertRow(d);
-    for (let j = 0; j <= width; j++) {
+    for (let j = 0; j < width; j++) {
         let cell = row.insertCell(j);
     cell.addEventListener('click', (event) => { // event listener click to set the color when a cell is clicked
         event.target.style.backgroundColor = color.value;
-     
     designCanvas.addEventListener('dblclick', (event) => { // event listener double click to remomve color when cell is double clicked
         event.target.style.backgroundColor = ''
     });
@@ -44,6 +43,7 @@ for (let d = 0; d <= height; d++) {  // nested for loop to to insert rows and ce
  
  
     }
+    
 
 
 
